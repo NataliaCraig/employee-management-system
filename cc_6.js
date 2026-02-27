@@ -3,22 +3,13 @@ class Employee {
     constructor(name, department, level = "Associate") {
         this.name = name;
         this.department = department;
-        this.level = level;
-    }
+        this.level = level; }
+        
 describe() {
 return `${this.name} works in ${this.department}`
  }
-
-    promote() {
-        if (this.level === "Associate") {
- this.level = "Manager";
-        } else if (this.level === "Manager") {
-    this.level = "Director";
-        } else {
-         this.level = "Executive";
-        }
-    }
 }
+
 // create subclass
 class Manager extends Employee {
 constructor(name, department, level = "Manager", teamSize) {
@@ -65,5 +56,17 @@ console.log(employee.describe());
 });
 }
 }
+
+//create company instance
+const myCompany = new Company();
+
+//add employees and managers
+myCompany.addEmployee(emp1);
+myCompany.addEmployee(emp2);
+myCompany.addEmployee(mgr1);
+myCompany.addEmployee(mgr2);
+
+//List all employees
+myCompany.listEmployees();
 
 
