@@ -3,10 +3,11 @@ class Employee {
     constructor(name, department, level = "Associate") {
         this.name = name;
         this.department = department;
-        this.level = level; }
-        
+        this.level = level; 
+    }
+
 describe() {
-return `${this.name} works in ${this.department}`
+return `${this.name} works in ${this.department}`;
  }
 }
 
