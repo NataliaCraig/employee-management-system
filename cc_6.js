@@ -49,4 +49,21 @@ console.log(mgr2.describe());
 console.log(mgr1.isExecutiveLevel()); // false
 console.log(mgr2.isExecutiveLevel()); // true
 
+// Create Company class
+class Company {
+constructor() {
+this.employees = [];
+}
+
+addEmployee(employee) {
+this.employees.push(employee);
+}
+
+listEmployees() {
+this.employees.forEach(employee => {
+console.log(employee.describe());
+});
+}
+}
+
 
